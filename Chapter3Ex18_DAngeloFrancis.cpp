@@ -1,4 +1,10 @@
-
+/*
+TITLE: Chapter 3 Exercise 18 - Interest Rate
+FILE NAME: Chapter3Ex18_DAngeloFrancis.cpp
+PROGRAMMER: D'Angelo Francis
+DATE: 9/19/24
+REQUIREMENTS: Caclulate amount of interest in a savings account after one year.
+*/
 
 #include <iostream>
 #include <iomanip>
