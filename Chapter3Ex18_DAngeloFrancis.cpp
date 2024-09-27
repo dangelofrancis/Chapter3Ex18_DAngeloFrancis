@@ -14,7 +14,8 @@ int main()
 {
 	double principal;
 	double interestRate;
-	double timesCompounded;
+	double currentSavings;
+	int timesCompounded;
 
 	// user inputs principal (original balance)
 	cout << "Calculating the balance in a savings account after one year." << endl << endl;
@@ -33,15 +34,21 @@ int main()
 	cout << endl;
 
 	// calculating balance in savings account after a year
-	int currentSavings = principal * pow(1 + interestRate / timesCompounded, timesCompounded);
+	interestRate = interestRate / 100;
+	currentSavings = principal * pow((1 + interestRate / timesCompounded), timesCompounded);
+
+	// calculate interest
+	double interest = currentSavings - principal;
+	interestRate = interestRate * 100;
 
 	// results
+	cout << fixed << setprecision(2);
 	cout << "-------------------------------------------------" << endl << endl;
 	cout << "Here is the balance in a savings account after one year: " << endl << endl;
 	cout << "- Interest Rate: " << interestRate << "% " << endl;
 	cout << "- Times Compounded: " << timesCompounded << endl;
 	cout << "- Principal: $" << principal << endl;
-	cout << "- Interest: " << endl;
+	cout << "- Interest: " << interest << endl;
 	cout << "- Amount in Savings: $" << currentSavings;
 
 	return 0;
